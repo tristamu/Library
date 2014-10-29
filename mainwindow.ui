@@ -41,6 +41,11 @@
       <string>ISBN</string>
      </property>
     </column>
+    <column>
+     <property name="text">
+      <string>Year</string>
+     </property>
+    </column>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
