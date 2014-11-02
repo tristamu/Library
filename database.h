@@ -5,6 +5,7 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QFile>
+#include <QSqlQuery>
 
 class DatabaseManager : public QObject
     {
@@ -14,6 +15,8 @@ class DatabaseManager : public QObject
 
     public:
         bool openDB();
+        bool createPersonTable();
+        int insertPerson(QString , QString , int );
         bool deleteDB();
         QSqlError lastError();
 
