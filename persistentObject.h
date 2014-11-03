@@ -7,10 +7,11 @@ class PersistentObject
 {
 private:
     QList<PersistentAttribute *> *attributes;
-    QString *table;
+    QString table;
     int id;
 public:
-    PersistentObject(QString);
+    PersistentObject(QString,int);
+    ~PersistentObject();
     void addAttribute(PersistentAttribute *);
     int save();
 };

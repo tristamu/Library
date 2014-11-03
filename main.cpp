@@ -5,22 +5,32 @@
 #include <QApplication>
 #include <QtSql>
 #include <QDebug>
+#include <QObject>
+
 #include<iostream>
 
-//using namespace std;
-/*int main(int argc, char *argv[])
+using namespace std;
+
+int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    MainWindow w;
-    w.setWindowTitle("Information Table");
-    w.show();
-    //cout << "Hello!" << endl;
+    //MainWindow w;
+   // w.setWindowTitle("Information Table");
+    //w.show();
+    QVariant v("hello");
+    //qDebug()<<v.toString();
+    //cout << v.typeName() << endl;
     //DatabaseManager db=DatabaseManager(NULL);
     //db.openDB();
+    QString qs="hello";
+    PersistentAttribute *attribut=new PersistentAttribute("sys",v);
+    PersistentObject pObjet(qs,5);
+    pObjet.addAttribute(attribut);
+    cout << pObjet.save() << endl;
 
-    return app.exec();
-}*/
-
+    return 0;//app.exec();
+}
+/*
 int main( int argc, char **argv )
 {
   QApplication app( argc, argv );
@@ -116,5 +126,5 @@ int main( int argc, char **argv )
     db.close();
 
   return 0;//app.exec();;
-}
+}*/
 

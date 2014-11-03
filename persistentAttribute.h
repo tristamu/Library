@@ -5,10 +5,10 @@
 class PersistentAttribute
 {
 public:
-QString name;
-QVariant::Type type;
-void *data;
-PersistentAttribute(QString *, QVariant::Type, void *);
+    QString name;
+    QVariant variable;
+
+PersistentAttribute(QString, QVariant);
 ~PersistentAttribute();
 };
 
